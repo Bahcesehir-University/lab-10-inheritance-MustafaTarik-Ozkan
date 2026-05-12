@@ -196,15 +196,15 @@ std::string Car::describe ()const{
 // ----------------------------------------------------------------
 
 // TODO: Implement Truck constructor (chain to Vehicle)
-Truck::Truck(std::string make,int year,double fuelLevel,double payloadTons):Vehicle( make, year,fuelLevel),payloadsTons(payloadTons){}
+Truck::Truck(std::string make,int year,double fuelLevel,double payload):Vehicle( make, year,fuelLevel),payloadsTons(payload){}
 // TODO: Implement getPayloadTons()
-double Truck::getPayloadTons()const{
+double Truck::getPayloadTons() const{
     return payloadsTons;
 }
 // TODO: Implement describe()
 std::string Truck::describe ()const{
     std::ostringstream oss;
-   oss<<"Truck: "<<make<<" ("<<year<<") "<<payloadsTons<<" loans, "<<"fuel:"<<"%"<<fuelLevel ;
+   oss<<"Truck: "<<make<<" ("<<year<<"),"<<" payload: " << payloadsTons <<", fuel:"<<fuelLevel<<"%" ;
     return oss.str();
 }
 
